@@ -1,6 +1,6 @@
 # sha256
-C++ implementation of Sha256, hashes to given number of bits.
-NOTE the code is written for little endian machines.
+C++ implementation of Sha256, hashes to given number of bits. </br>
+**NOTE the code is written for little endian machines.** </br>
 
 Type `make` in the root of the repository, and then run `./sha256 <message>`.
 Usage (Note the code is written for little endian machines):
