@@ -190,7 +190,7 @@ void Sha256::processIn512Chunks(){
 	// print out final hash to be returned
 	cout << dec << "final hash returned (" << numBitsToHash << " bits, " << numBytesToHash << " bytes) is : " << endl;
 	for (i = 0; i < (unsigned int) numBytesToHash; i++){
-		cout << hex << (int) (output[i]);
+		cout << hex << setw(2) << setfill('0') << (int) (output[i]);
 	}
 	cout << endl << endl;
 

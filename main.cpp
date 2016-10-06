@@ -19,9 +19,9 @@ int main(int argc, char* argv[]){
 	hash = sha.hash();
 		
 	// print out the hashed results in hex	
-	cout << "hash is: " << endl;	
+	cout << "double check: hash is " << endl;	
 	for (i = 0; i < sha.getNumberOfHashedBytes(); i++){
-		cout << hex << (int) hash[i];
+		cout << hex << setw(2) << setfill('0') << (int) hash[i];
 	}
 	cout << endl;
 
