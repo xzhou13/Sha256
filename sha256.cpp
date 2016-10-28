@@ -18,7 +18,6 @@ unsigned char* Sha256::hash(){
 	return output;
 }
 
-// null constructor
 Sha256::Sha256(){
 
 }
@@ -56,11 +55,6 @@ void Sha256::pre_processing(){
 	// begining of preProcessedMsg
 	memset(preProcessedMsg, 0, numTotBits/8);
 	memcpy(preProcessedMsg, message, numBytesToHash);
-
-	/*
-	// append '1', or 1000 0000 (byte unit) to where initial message ends
-	 *(preProcessedMsg + messageSize) = 0x80;
-	 */
 
 	// append '1' and '0's
 	*(preProcessedMsg + (numBitsToHash/8)) |= (1 << (7 - (numBitsToHash % 8)));
